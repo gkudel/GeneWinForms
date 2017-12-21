@@ -1,0 +1,26 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using entiy = GeneWinForms.Models;
+using System.ComponentModel;
+using GeneWinForms.Proxy;
+using GeneWinForms.Dao;
+using DevExpress.Mvvm.POCO;
+using DevExpress.Mvvm.DataAnnotations;
+using GeneWinForms.Models.ViewModels.Order;
+using GeneWinForms.Models.ViewModels.Base;
+using GeneWinForms.Models.ViewModels.Base.Interfaces;
+using GeneWinForms.Repositories;
+
+namespace GeneWinForms.Models.ViewModels.Test
+{
+    [POCOViewModel]
+    public class TestCollectionViewModel : CollectionViewModel<OrderViewModel, entiy.Order, entiy.Test>
+    {
+        public TestCollectionViewModel(IUnitOfWork<entiy.Test> unitOfWork)
+            : base(o => o.Tests, unitOfWork)
+        {
+        }
+    }
+}

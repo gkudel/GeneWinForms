@@ -1,0 +1,275 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{748C881B-24E9-40F0-A269-DC1AFA073440}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GeneWinForms</RootNamespace>
+    <AssemblyName>GeneWinForms</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac, Version=3.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Castle.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Core.4.2.1\lib\net40\Castle.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Images.v17.2, Version=17.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Mvvm.v17.2, Version=17.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v17.2.Core, Version=17.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v17.2.Core, Version=17.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v17.2.Export, Version=17.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v17.2.Core, Version=17.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v17.2, Version=17.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v17.2, Version=17.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v17.2, Version=17.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v17.2, Version=17.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v17.2, Version=17.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v17.2, Version=17.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v17.2, Version=17.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dao\OrderDao.cs" />
+    <Compile Include="Dao\SpecimenDao.cs" />
+    <Compile Include="Dao\TestDao.cs" />
+    <Compile Include="Extensions\Autofac.IComponentContext.cs" />
+    <Compile Include="Extensions\Autofac.Parameter.cs" />
+    <Compile Include="Extensions\DevExpress.Mvvm.IDialogServiceExtensions.cs" />
+    <Compile Include="Extensions\DevExpress.Mvvm.IDocumentManagerService.cs" />
+    <Compile Include="Extensions\System.Array.cs" />
+    <Compile Include="Extensions\System.Collections.Generic.List.cs" />
+    <Compile Include="Extensions\System.Object.cs" />
+    <Compile Include="Extensions\System.Reflection.MethodInfo.cs" />
+    <Compile Include="Extensions\System.Reflection.PropertyInfo.cs" />
+    <Compile Include="Extensions\System.Type.cs" />
+    <Compile Include="Extensions\System.Windows.Forms.Control.cs" />
+    <Compile Include="IoC.Autofac\IoC.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Messages\OrderControlShowed.cs" />
+    <Compile Include="Models\IoC\EntityModule.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\Specimen.cs" />
+    <Compile Include="Models\Test.cs" />
+    <Compile Include="Models\ViewModels\Base\AbstractParentViewModel.cs" />
+    <Compile Include="Models\ViewModels\Base\CollectionViewModel.cs" />
+    <Compile Include="Models\ViewModels\Base\Interfaces\IEntityViewModel.cs" />
+    <Compile Include="Models\ViewModels\Base\Interfaces\IUnitOfWork.cs" />
+    <Compile Include="Models\ViewModels\Base\RepositoryViewModel.cs" />
+    <Compile Include="Models\ViewModels\Base\SingleEntityViewModel.cs" />
+    <Compile Include="Models\ViewModels\Base\SpecificParentViewModel.cs" />
+    <Compile Include="Models\ViewModels\Base\UnitOfWork.cs" />
+    <Compile Include="Models\ViewModels\IoC\ViewModulesModule.cs" />
+    <Compile Include="Models\ViewModels\LazyControl\LazyViewModel.cs" />
+    <Compile Include="Models\ViewModels\OrderHeader\OrderHeaderViewModel.cs" />
+    <Compile Include="Models\ViewModels\Order\OrderViewModel.cs" />
+    <Compile Include="Models\ViewModels\Specimen\SpecimenCollectionViewModel.cs" />
+    <Compile Include="Models\ViewModels\Test\TestCollectionViewModel.cs" />
+    <Compile Include="Models\ViewModels\Test\TestViewModel.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Proxy\AbstractInterceptor.cs" />
+    <Compile Include="Proxy\Attributes\LazyLoadingAttribute.cs" />
+    <Compile Include="Proxy\Descriptors\Method.cs" />
+    <Compile Include="Proxy\Descriptors\Property.cs" />
+    <Compile Include="Proxy\Descriptors\ProxyMethod.cs" />
+    <Compile Include="Proxy\Descriptors\Type.cs" />
+    <Compile Include="Proxy\Entity.cs" />
+    <Compile Include="Proxy\EntityInterceptorGenerationHook.cs" />
+    <Compile Include="Proxy\EntityInterceptorSelector.cs" />
+    <Compile Include="Proxy\GenericEntity.cs" />
+    <Compile Include="Proxy\Interceptors\GetData.cs" />
+    <Compile Include="Proxy\Interceptors\InterceptorEnums.cs" />
+    <Compile Include="Proxy\Interceptors\IoC\InterceptorsModule.cs" />
+    <Compile Include="Proxy\Interceptors\LazyLoading.cs" />
+    <Compile Include="Proxy\Interceptors\SetData.cs" />
+    <Compile Include="Repositories\Impl\AbstractReletedRepository.cs" />
+    <Compile Include="Repositories\Impl\OrderRepository.cs" />
+    <Compile Include="Repositories\Impl\SpecimenRepository.cs" />
+    <Compile Include="Repositories\Impl\TestRepository.cs" />
+    <Compile Include="Repositories\IoC\RepositoriesModule.cs" />
+    <Compile Include="Repositories\IRepository.cs" />
+    <Compile Include="Tools\Optional.cs" />
+    <Compile Include="Tools\ReadOnlyDictionary.cs" />
+    <Compile Include="Tools\Validator.cs" />
+    <Compile Include="Views\Base\Attributes\ViewAttribute.cs" />
+    <Compile Include="Views\Base\CollectionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Base\CollectionView.Designer.cs">
+      <DependentUpon>CollectionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Base\DefaultView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Base\DefaultView.Designer.cs">
+      <DependentUpon>DefaultView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Base\DesignerEditors\ParenViewModelTypeEditor.cs" />
+    <Compile Include="Views\Base\DesignerEditors\ViewIdentityEditor.cs" />
+    <Compile Include="Views\Base\ExDialogService\ExDialogService.cs" />
+    <Compile Include="Views\Base\ExDialogService\ProxyDialogFormFactory.cs" />
+    <Compile Include="Views\Base\Interfaces\ILazyControl.cs" />
+    <Compile Include="Views\Base\Interfaces\IView.cs" />
+    <Compile Include="Views\Base\Interfaces\IViewResolver.cs" />
+    <Compile Include="Views\Base\LazyControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Base\LazyControl.Designer.cs">
+      <DependentUpon>LazyControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Base\Resolver\ViewIdentity.cs" />
+    <Compile Include="Views\Base\Resolver\ViewResolver.cs" />
+    <Compile Include="Views\Base\SingleView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Base\SingleView.Designer.cs">
+      <DependentUpon>SingleView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\OrderHeader\OrderHeaderView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\OrderHeader\OrderHeaderView.Designer.cs">
+      <DependentUpon>OrderHeaderView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Specimen\SpecimenCollectionBaseView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Specimen\SpecimenCollectionBaseView.Designer.cs">
+      <DependentUpon>SpecimenCollectionBaseView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Specimen\SpecimenCollectionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Specimen\SpecimenCollectionView.Designer.cs">
+      <DependentUpon>SpecimenCollectionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Test\TestCollectionBaseView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Test\TestCollectionBaseView.Designer.cs">
+      <DependentUpon>TestCollectionBaseView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Test\TestCollectionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Test\TestCollectionView.Designer.cs">
+      <DependentUpon>TestCollectionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Test\TestView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Test\TestView.Designer.cs">
+      <DependentUpon>TestView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Test\TestViewBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Test\TestViewBase.Designer.cs">
+      <DependentUpon>TestViewBase.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Views\Base\CollectionView.resx">
+      <DependentUpon>CollectionView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Base\DefaultView.resx">
+      <DependentUpon>DefaultView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Base\LazyControl.resx">
+      <DependentUpon>LazyControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Base\SingleView.resx">
+      <DependentUpon>SingleView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\OrderHeader\OrderHeaderView.resx">
+      <DependentUpon>OrderHeaderView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Specimen\SpecimenCollectionView.resx">
+      <DependentUpon>SpecimenCollectionView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Test\TestCollectionView.resx">
+      <DependentUpon>TestCollectionView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Test\TestView.resx">
+      <DependentUpon>TestView.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
