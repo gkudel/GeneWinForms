@@ -13,13 +13,7 @@ namespace GeneWinForms.IoC.Autofac
     {
         private static ILifetimeScope _container;
 
-        public static ILifetimeScope Container
-        {
-            get
-            {
-                return _container;
-            }
-        }
+        public static ILifetimeScope Container { get { return _container; } }
 
         public static void Configure(params Assembly[] assemblies)
         {
