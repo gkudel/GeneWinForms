@@ -19,7 +19,7 @@ namespace GeneWinForms.Models
     {
         private IList<Test> tests;
 
-        public Order(ILifetimeScope scope, OrderDao dao)
+        public Order(OrderDao dao)
             : base(dao)
         {
         }

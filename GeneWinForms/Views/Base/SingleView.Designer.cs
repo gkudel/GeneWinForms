@@ -47,7 +47,6 @@
             // mvvmContext
             // 
             this.mvvmContext.ContainerControl = this;
-            this.mvvmContext.ViewModelType = typeof(GeneWinForms.Models.ViewModels.Test.TestViewModel);
             // 
             // ribbonControl
             // 
@@ -90,7 +89,7 @@
             this.ribbonPage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.rbpLayout});
             this.ribbonPage.Name = "ribbonPage";
-            this.ribbonPage.Text = "Test";
+            this.ribbonPage.Text = "Details";
             // 
             // rbpLayout
             // 
@@ -127,6 +126,7 @@
             this.Controls.Add(this.ribbonControl);
             this.Name = "SingleView";
             this.Size = new System.Drawing.Size(479, 396);
+            this.Load += new System.EventHandler(this.SingleViewLoad);
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl)).EndInit();

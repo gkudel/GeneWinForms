@@ -21,7 +21,6 @@ namespace GeneWinForms.Views.Base
         public SingleView()
         {
             InitializeComponent();
-            if (!mvvmContext.IsDesignMode) InitBinding();
         }
 
         public virtual void InitBinding()
@@ -34,6 +33,11 @@ namespace GeneWinForms.Views.Base
 
         public virtual void EntiyChanged()
         {
+        }
+
+        private void SingleViewLoad(object sender, EventArgs e)
+        {
+            if (!mvvmContext.IsDesignMode) InitBinding();
         }
     }
 }

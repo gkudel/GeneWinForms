@@ -108,6 +108,7 @@
     <Compile Include="Models\ViewModels\OrderHeader\OrderHeaderViewModel.cs" />
     <Compile Include="Models\ViewModels\Order\OrderViewModel.cs" />
     <Compile Include="Models\ViewModels\Specimen\SpecimenCollectionViewModel.cs" />
+    <Compile Include="Models\ViewModels\Specimen\SpecimenViewModel.cs" />
     <Compile Include="Models\ViewModels\Test\TestCollectionViewModel.cs" />
     <Compile Include="Models\ViewModels\Test\TestViewModel.cs" />
     <Compile Include="Program.cs" />
@@ -188,6 +189,18 @@
     <Compile Include="Views\Specimen\SpecimenCollectionView.Designer.cs">
       <DependentUpon>SpecimenCollectionView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Specimen\SpecimenView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Specimen\SpecimenView.Designer.cs">
+      <DependentUpon>SpecimenView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Specimen\SpecimenViewBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Specimen\SpecimenViewBase.Designer.cs">
+      <DependentUpon>SpecimenViewBase.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Test\TestCollectionBaseView.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -215,6 +228,7 @@
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -242,6 +256,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Specimen\SpecimenCollectionView.resx">
       <DependentUpon>SpecimenCollectionView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Specimen\SpecimenView.resx">
+      <DependentUpon>SpecimenView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Test\TestCollectionView.resx">
       <DependentUpon>TestCollectionView.cs</DependentUpon>
